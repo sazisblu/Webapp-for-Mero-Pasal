@@ -1,0 +1,40 @@
+{
+  "name": "mero-pasal-web",
+  "version": "1.0.0",
+  "description": "Producer Insights Platform - Market analytics for producers",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
+    "install:all": "npm install && cd backend && npm install",
+    "setup": "npm run install:all && cp .env.example .env.local && cp backend/.env.example backend/.env"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.82.0",
+    "autoprefixer": "^10.4.21",
+    "date-fns": "^3.6.0",
+    "lucide-react": "^0.525.0",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-day-picker": "^8.10.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.7",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
